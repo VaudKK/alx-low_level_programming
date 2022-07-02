@@ -8,5 +8,7 @@
 
 int main(void)
 {
-  return (0);
+	printf("This is a string\n");
+
+	return (0);
 }
