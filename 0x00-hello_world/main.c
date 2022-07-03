@@ -5,10 +5,7 @@
  *
  *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	printf("This is a string\n");
-
 	return (0);
 }
