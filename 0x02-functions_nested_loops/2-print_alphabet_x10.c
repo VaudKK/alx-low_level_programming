@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - prints alphabets
+ * print_alphabet_x10 - prints alphabets
  *
  */
 void print_alphabet_x10(void)
@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 97; j < (97 + 25); j++)
+		for (j = 97; j <= (97 + 25); j++)
 			_putchar(j);
 
 		_putchar('\n');
