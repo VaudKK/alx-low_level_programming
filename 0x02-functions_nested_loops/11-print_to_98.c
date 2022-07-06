@@ -6,15 +6,14 @@
  */
 void print_number(int number)
 {
-	int ones, tens, hundreds, is_negative;
+	int ones, tens, hundreds, actual_number;
+
+	actual_number = number;
 
 	if (number < 0)
 	{
-		is_negative = 1;
 		number *= -1;
 	}
-
-	is_negative = 0;
 
 	if (number > 99)
 	{
@@ -39,7 +38,7 @@ void print_number(int number)
 		_putchar(number + '0');
 	}
 
-	if (number != 98 && is_negative == 0)
+	if (actual_number != 98)
 	{
 		_putchar(',');
 		_putchar(' ');
