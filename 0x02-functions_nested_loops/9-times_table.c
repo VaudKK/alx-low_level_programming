@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * times table - prints times table
+ * times_table - prints times table
  *
  */
 void times_table(void)
@@ -18,6 +18,17 @@ void times_table(void)
 		{
 			product = i * j;
 
+			if ( j > 0 && j < 10)
+			{
+				_putchar(44);
+				_putchar(32);
+
+				if (product < 10)
+				{
+					_putchar(32);
+				}
+			}
+
 			if (product > 9)
 			{
 				tens = product / 10;
@@ -29,12 +40,6 @@ void times_table(void)
 			else
 			{
 				_putchar(product + '0');
-			}
-
-			if (j < 9)
-			{
-				_putchar(44);
-				_putchar(32);
 			}
 		}
 
