@@ -6,12 +6,20 @@
  */
 void print_number(int number)
 {
-	int ones, tens, hundreds;
+	int ones, tens, hundreds, is_negative;
+
+	if (number < 0)
+	{
+		is_negative = 1;
+		number *= -1;
+	}
+
+	is_negative = 0;
 
 	if (number > 99)
 	{
 		hundreds = number / 100;
-		tens = number / 10;
+		tens = (number / 10) % 10;
 		ones = number % 10;
 
 		_putchar(hundreds + '0');
@@ -31,7 +39,7 @@ void print_number(int number)
 		_putchar(number + '0');
 	}
 
-	if (number != 98)
+	if (number != 98 && is_negative == 0)
 	{
 		_putchar(',');
 		_putchar(' ');
@@ -46,7 +54,7 @@ void print_number(int number)
  */
 void print_to_98(int n)
 {
-	int number, absolute;
+	int number;
 
 	number = n;
 
@@ -64,10 +72,8 @@ void print_to_98(int n)
 		{
 			if (number < 0)
 			{
-				absolute = number * -1;
-
 				_putchar('-');
-				print_number(absolute);
+				print_number(number);
 			}
 			else
 			{
