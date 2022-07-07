@@ -18,6 +18,10 @@ void more_numbers(void)
 				ones = j % 10;
 
 				_putchar(tens + '0');
+			}
+
+			if (j > 9)
+			{
 				_putchar(ones + '0');
 			}
 			else
