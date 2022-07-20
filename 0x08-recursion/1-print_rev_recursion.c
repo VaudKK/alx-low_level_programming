@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -12,6 +11,11 @@ void _print_rev_recursion(char *s)
 	char copy[10000];
 	int len = strlen(s) - 1;
 
+	if (len < 0)
+	{
+		return;
+	}
+
 	if (len == 0)
 	{
 		_putchar(*s);
@@ -22,7 +26,7 @@ void _print_rev_recursion(char *s)
 
 	strcpy(copy, s);
 
-	copy[len] = '\0'; 
+	copy[len] = '\0';
 
 	_print_rev_recursion(copy);
 }
