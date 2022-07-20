@@ -10,7 +10,6 @@
 void _print_rev_recursion(char *s)
 {
 	int len = 0;
-	char *dest = malloc(sizeof(char));
 
 	len = strlen(s) - 1;
 
@@ -22,7 +21,7 @@ void _print_rev_recursion(char *s)
 
 	_putchar(s[len]);
 
-	strncpy(dest, s, len);
+	s[len] = 0;
 
-	_print_rev_recursion(dest);
+	_print_rev_recursion(s);
 }
