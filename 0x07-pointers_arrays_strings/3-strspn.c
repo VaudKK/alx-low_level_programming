@@ -1,3 +1,5 @@
+#include <string.h>
+
 /**
  * _strspn - gets the number of bytes
  * @s: the string to be checked
@@ -7,17 +9,31 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
+	size_t i, j;
+	int flag;
 	unsigned int count = 0;
 
-	for (i = 0; accept[i] != '\0'; i++)
+	flag = 0;
+
+	for (i = 0; i < strlen(s); i++)
 	{
-		for (j = 0; s[j] != '\0'; j++)
+		for (j = 0; j < strlen(accept); j++)
 		{
-			if (accept[i] == s[j])
+			flag = 0;
+			if (accept[j] == s[i])
 			{
-				count += 1;
+				flag = 1;
+				break;
 			}
+		}
+
+		if (flag == 1)
+		{
+			count++;
+		}
+		else
+		{
+			break;
 		}
 	}
 

@@ -6,3 +6,4 @@ char *_strpbrk(char *, char *);
 char *_strstr(char *, char *);
 int _putchar(char);
 void print_chessboard(char (*a)[8]);
+void print_diagsums(int *, int);
