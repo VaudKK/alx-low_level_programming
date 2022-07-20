@@ -15,15 +15,15 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		lrsum += a[i][j];
+		lrsum += (a + i)[j];
 		j++;
 	}
 
 	j = 0;
 
-	for (i = size - 1; i >= 0; i--)
+	for (i = (size - 1); i >= 0; i--)
 	{
-		rlsum += a[i][j];
+		rlsum += (a + i)[j];
 		j++;
 	}
 
