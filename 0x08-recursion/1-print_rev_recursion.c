@@ -12,17 +12,17 @@ void _print_rev_recursion(char *s)
 	int len = 0;
 	char *dest = malloc(sizeof(char));
 
-	len = strlen(s);
+	len = strlen(s) - 1;
 
-	if (len == 1)
+	if (len == 0)
 	{
 		_putchar(*s);
 		return;
 	}
 
-	_putchar(s[len - 1]);
+	_putchar(s[len]);
 
-	strncpy(dest,s,len - 1);
+	strncpy(dest, s, len);
 
 	_print_rev_recursion(dest);
 }
