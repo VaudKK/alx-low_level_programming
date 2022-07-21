@@ -5,3 +5,4 @@ int _strlen_recursion(char *);
 int factorial(int);
 int _pow_recursion(int, int);
 int is_prime_number(int);
+int _sqrt_recursion(int);
