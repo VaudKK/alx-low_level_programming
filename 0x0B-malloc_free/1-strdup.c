@@ -12,9 +12,14 @@ char *_strdup(char *str)
 	char *newstr =  (char *)malloc(sizeof(char) * strlen(str));
 
 	if (str == NULL)
+	{
 		return (NULL);
+	}
 
-	strcpy(newstr, str);
+	if (newstr != NULL)
+	{
+		strcpy(newstr, str);
+	}
 
 	return (newstr);
 }
