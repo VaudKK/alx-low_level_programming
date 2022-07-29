@@ -8,24 +8,18 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *new_array;
-	unsigned int i;
+	void  *new_array;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 
-	new_array = malloc(nmemb * size);
+	new_array = calloc(nmemb, size);
 
 	if (new_array == NULL)
 	{
 		return (NULL);
-	}
-
-	for (i = 0; i < nmemb; i++)
-	{
-		new_array[i] = 0;
 	}
 
 	return (new_array);
