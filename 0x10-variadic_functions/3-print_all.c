@@ -9,14 +9,13 @@
  */
 void print_string(char *value)
 {
-	if (value == NULL)
-	{
-		printf("%s", "(nil)");
-	}
-	else
+	while (value != NULL)
 	{
 		printf("%s", value);
+		return;
 	}
+
+	printf("%s", "(nil)");
 }
 
 /**
