@@ -1,4 +1,4 @@
-#include <starg.h>
+#include <stdarg.h>
 
 /**
  * sum_them_all - sums all the numbers
@@ -9,7 +9,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list numbers;
-	int i, sum;
+	unsigned int i, sum;
 
 	sum = 0;
 
