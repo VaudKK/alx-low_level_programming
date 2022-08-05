@@ -1,5 +1,6 @@
 #include <stdio.h>
-.
+#include <stdlib.h>
+
 /**
  * op_add - Adds
  * @a: param
@@ -65,7 +66,7 @@ int op_mod(int a, int b)
 {
 	if (b == 0)
 	{
-		prntf("Error\n");
+		printf("Error\n");
 		exit(100);
 	}
 
