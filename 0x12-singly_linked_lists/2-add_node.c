@@ -7,7 +7,7 @@
  * @head: the head of the linked list
  * @str: the string to be added
  *
- * Retur: pointer
+ * Return: pointer
  */
 list_t *add_node(list_t **head, const char *str)
 {
