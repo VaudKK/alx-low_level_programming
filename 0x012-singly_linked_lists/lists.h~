@@ -1,4 +1,0 @@
-#ifndef LIST_FUNCTIONS
-#define LIST_FUNCTIONS
-size_t print_list(const list_t *h);
-#endif
