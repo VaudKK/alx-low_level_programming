@@ -1,4 +1,0 @@
-#ifndef MORE_LINKED_LISTS
-#define MORE_LINKED_LISTS
-size_t print_listint(const listint_t *h);
-#endif
