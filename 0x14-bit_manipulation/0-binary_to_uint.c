@@ -38,7 +38,7 @@ int check_occurrence(const char *b)
 
 	while (b[i] != '\0')
 	{
-		if (b[i] <48 || b[i] > 49)
+		if (b[i] < 48 || b[i] > 49)
 			count += 1;
 
 		i++;
