@@ -36,7 +36,7 @@ int *to_binary_string(unsigned long int n)
 	unsigned long int power_of_two = 1;
 	int power = 0;
 	unsigned long int remainder;
-	int *binary_values = malloc(sizeof(int) * 30);
+	int *binary_values = malloc(sizeof(int) * 100);
 	int i = 0;
 
 	while (n > power_of_two)
@@ -79,7 +79,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	int *binaries = to_binary_string(n);
 	int total_bits = 0;
 	int i = 0;
-	int reversed[30];
+	int reversed[100];
 
 	while (binaries[i] != -1)
 	{
