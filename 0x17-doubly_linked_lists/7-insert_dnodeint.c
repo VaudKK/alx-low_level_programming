@@ -27,11 +27,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (i == idx)
 		{
-			head->prev->next = new_item;
-			new_item->prev = head->prev;
+			if (i == 0)
+			{
+				new_item->next = head;
+				head->prev = new_item;
+			}
+			else
+			{
+				head->prev->next = new_item;
+				new_item->prev = head->prev;
 
-			new_item->next = head;
-			head->prev = new_item;
+				new_item->next = head;
+				head->prev = new_item;
+			}
 			return (new_item);
 		}
 		i++;
