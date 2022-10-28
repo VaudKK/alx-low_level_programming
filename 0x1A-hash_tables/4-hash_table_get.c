@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stddef.h>
 
 /**
  * hash_table_get - get value
@@ -10,18 +11,18 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int key;
+	unsigned long int index;
 	hash_node_t **array;
 
 	if (ht == NULL || key == NULL)
 		return (NULL);
 
-	key = key_index(key, ht->size);
+	index = key_index((const unsigned char*)key, ht->size);
 	array = ht->array;
 
-	if (array[key] != NULL)
+	if (array[index] != NULL)
 	{
-		return (array[key]->value);
+		return (array[index]->value);
 	}
 
 	return (NULL);
