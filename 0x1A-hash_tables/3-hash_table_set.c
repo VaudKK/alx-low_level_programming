@@ -12,8 +12,14 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node = malloc(sizeof(hash_node_t));
-	unsigned long int index = key_index((unsigned char *)key, ht->size);
-	hash_node_t **table = ht->array;
+	unsigned long int index;
+	hash_node_t **table;
+
+	if (ht == NULL || value == NULL)
+		return (0);
+
+	index = key_index((unsigned char *)key, ht->size);
+	table = ht->array;
 
 	if (node == NULL)
 		return (0);
