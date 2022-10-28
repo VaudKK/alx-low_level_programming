@@ -18,8 +18,14 @@ int main(void)
   hash_table_set(ht, "python", "awesome");
   hash_table_set(ht, "Bob", "and Kris love asm");
   hash_table_set(ht, "N", "queens");
+  hash_table_set(ht, "Bob", "vaid asm");
+  hash_table_set(ht, "N", "kings and queens");
   hash_table_set(ht, "Asterix", "Obelix");
   hash_table_set(ht, "Betty", "Cool");
+  hash_table_set(ht, "c", "wfun");
+  hash_table_set(ht, "c", "qfun");
+  hash_table_set(ht, "c", "zfun");
+  hash_table_set(ht, "c", "afun");
   hash_table_set(ht, "98", "Battery Street");
   hash_table_print(ht);
   return (EXIT_SUCCESS);
