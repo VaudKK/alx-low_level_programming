@@ -1,6 +1,0 @@
-.PHONY: all
-
-CC = gcc
-
-all:
-	${CC} *.c -o school
