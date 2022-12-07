@@ -1,6 +1,4 @@
 .PHONY: all
 
-CC = gcc
-
 all:
-	${CC} main.c school.c -o school
+	gcc main.c school.c -o school
