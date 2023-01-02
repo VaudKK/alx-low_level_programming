@@ -17,10 +17,10 @@ clean:
 	${RM} -f *~ school
 
 oclean:
-	${RM} -f main.o school.o
+	${RM} -f ${OBJ}
 
 fclean:
 	${RM} -f *~ school
-	${RM} -f main.o school.o
+	${RM} -f ${OBJ}
 
 re: oclean all
