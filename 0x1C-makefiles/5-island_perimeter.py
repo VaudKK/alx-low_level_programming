@@ -16,7 +16,6 @@ def island_perimeter(grid):
         for row_index, col in enumerate(row):
             if col == 1:
                 assumed_perimeter += 4
-                
                 if grid_index != 0 and grid[grid_index-1][row_index] == 1:
                     deductions += 1
                 if row_index != 0 and row[row_index-1] == 1:
