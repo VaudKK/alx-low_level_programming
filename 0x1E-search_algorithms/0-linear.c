@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * linear_search - performs a linear search
  * @array: the array to search in
