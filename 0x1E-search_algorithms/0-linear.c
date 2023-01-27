@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 
 /**
  * linear_search - performs a linear search
